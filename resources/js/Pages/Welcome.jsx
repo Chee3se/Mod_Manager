@@ -44,15 +44,15 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                     </>
                                 )}
                             </nav>
-                            <h1 className="justify-self-center col-start-2">Welcome!</h1>
+                            <h1 className="justify-self-center col-span-full text-4xl text-black">Welcome!</h1>
                         </header>
 
                         <main className="mt-6">
 
                         </main>
 
-                        <footer className="relative bottom-0 w-max mx-auto col-start-2 py-3 text-sm text-black">
-                            Copyright © 2024 You copy, You gay
+                        <footer className="absolute left-0 bottom-0 h-fit my-4 mb-5 w-full">
+                            <p className="text-black text-center py-auto">Copyright © 2024 You copy, You gay</p>
                         </footer>
                     </div>
                 </div>
