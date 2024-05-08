@@ -66,7 +66,7 @@ export default function Login({ status, canResetPassword }) {
                     <InputError message={errors.password} className="mt-2" />
                 </div>
 
-                <div className="block mt-4">
+                <div className="flex flex-row mt-4">
                     <label className="flex items-center">
                         <Checkbox
                             name="remember"
@@ -75,6 +75,12 @@ export default function Login({ status, canResetPassword }) {
                         />
                         <span className="ms-2 text-sm text-gray-600">Remember me</span>
                     </label>
+                    <Link
+                        href={route('register')}
+                        className="ml-auto underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                    >
+                        Dont have an account?
+                    </Link>
                 </div>
 
                 <div className="flex items-center justify-end mt-4">

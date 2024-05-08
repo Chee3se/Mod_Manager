@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.title-gradient {
+    background: linear-gradient(to right, #efe400, #ffb500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bolder;
+}
+
+.register-button {
+    background-color: #ffba00;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    width: 150px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+    background-color: #d39400;
+}

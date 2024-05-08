@@ -24,8 +24,8 @@ export default function Authenticated({ user, header, children }) {
                                 <NavLink href={route('dashboard')} active={route().current('dashboard')}>
                                     Dashboard
                                 </NavLink>
-                                <NavLink href={route('mods')} active={route().current('mods')}>
-                                    Mods
+                                <NavLink href={route('games.index')} active={route().current('games.index')}>
+                                    Games
                                 </NavLink>
                             </div>
                         </div>
