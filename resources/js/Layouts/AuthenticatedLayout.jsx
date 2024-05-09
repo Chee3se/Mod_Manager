@@ -5,11 +5,13 @@ import NavLink from '@/Components/NavLink';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink';
 import { Link } from '@inertiajs/react';
 
-export default function Authenticated({ user, header, children }) {
+export default function Authenticated({ user, header, children, backgroundImage }) {
     const [showingNavigationDropdown, setShowingNavigationDropdown] = useState(false);
 
+    const layoutStyle = backgroundImage ? { backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' } : {};
+    console.log(backgroundImage)
     return (
-        <div className="min-h-screen bg-gray-100">
+        <div className="min-h-screen bg-gray-100" style={layoutStyle}>
             <nav className="bg-white border-b border-gray-100">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between h-16">
@@ -97,6 +99,9 @@ export default function Authenticated({ user, header, children }) {
                     <div className="pt-2 pb-3 space-y-1">
                         <ResponsiveNavLink href={route('dashboard')} active={route().current('dashboard')}>
                             Dashboard
+                        </ResponsiveNavLink>
+                        <ResponsiveNavLink href={route('games.index')} active={route().current('games.index')}>
+                            Games
                         </ResponsiveNavLink>
                     </div>
 

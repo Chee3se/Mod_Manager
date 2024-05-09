@@ -24,27 +24,13 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/games', function () {
+// Games CRUD
+require __DIR__.'/games.php';
 
-})->middleware(['auth', 'verified'])->name('games');
+// Mods CRUD
+require __DIR__.'/mods.php';
 
-Route::middleware(['auth', 'verified'])->group(function () {
-    // index
-    Route::get('/games', [GameController::class, 'index'])->name('games.index');
-
-    // Create
-    Route::get('/games/create', [GameController::class, 'create'])->name('games.create');
-    Route::post('/games', [GameController::class, 'store'])->name('games.store');
-
-    // Read
-    Route::get('/games/{id}', [GameController::class, 'show'])->name('games.show');
-
-    // Update
-    Route::get('/games/{id}/edit', [GameController::class, 'edit'])->name('games.edit');
-    Route::put('/games/{id}', [GameController::class, 'update'])->name('games.update');
-
-    // Delete
-    Route::delete('/games/{id}', [GameController::class, 'destroy'])->name('games.destroy');
-});
+// Categories CRUD
+require __DIR__.'/categories.php';
 
 require __DIR__.'/auth.php';
